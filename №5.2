@@ -1,0 +1,5 @@
+from random import *
+output = open('int_data.txt', 'w')
+for i in range (10000000):
+    print('%.2f' % (100*random()), file=output)
+output.close()
