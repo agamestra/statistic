@@ -1,0 +1,16 @@
+n=int(input())
+if n == 0:
+    print(1)
+elif n == 1:
+    print(1)
+    print(1, 1)
+else:
+    print(1)
+    print(1, 1)
+    A = [1, 1]
+    for i in range(n-1):
+        for j in range(len(A)-1):
+            A.insert(2*j+1, A[2*j+1]+A[2*j])
+        for j in range((len(A)-3)//2):
+            A.pop(2+j)
+        print(' '.join(map(str, A)))
